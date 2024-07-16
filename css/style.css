@@ -1,0 +1,260 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:  rgba(187, 137, 137, 1);
+}
+
+Header{
+   /* height: 125px;*/
+   object-fit: contain; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.logo{
+    width: 10%;
+    text-align: center;
+    border: aliceblue solid 4px;
+    margin: 39px 12px;
+}
+
+header nav{
+    width: 90%;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;  
+     
+   
+}
+
+header a{
+    text-decoration: none; 
+    color: black; 
+    font-family: 'Inter', sans-serif;
+}
+
+header a:hover{
+    color:rgb(112, 204, 216);
+}
+
+/*
+.accueil{
+   
+    background-image: url(../image/ImageAccueil.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 60vh;
+} */
+.accueil2{
+    position: relative;
+ 
+}
+.accueil2 h1{
+    text-align: center;
+    color: aliceblue;
+    position: relative; /*par rapport à l'image arrière on met en relative*/
+    font-size: 30px;
+    top: 9em;
+   
+}
+
+.accueil2 img{
+    
+    z-index:-1; /*mettre un z-index élevé pour mettre le texte en avant de l'image */
+    width: 100%; 
+    
+}
+
+.articles{
+    /* position:relative; */
+    width: 65%;
+    margin: 20px auto;
+    border: solid 4px yellow
+}
+.articles h2{
+    
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.articles  article h3{ /*titre des articles */
+   
+    color: white;
+    /* text-align: center; */
+    border:5px solid red;
+    padding: 5px 10px; 
+    margin:8px 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.articles article h3 img{
+    margin: -2px 17px;
+    width: 2%;
+   
+}
+
+p{
+    color: aliceblue;
+    border: 5px solid green;
+    text-align: justify;
+    padding: 12px 8px;
+}
+
+.caroussel h2{
+    text-align: center;
+    font-size: 20px;
+    color: aliceblue;
+    
+}
+.caroussel{
+    width: 65%;
+    border: solid 4px blueviolet;
+    margin: 29px 261px;
+}
+
+.carousel-container{
+    border: solid 4px #FFF;
+    
+    margin: 20px auto;
+    overflow: hidden;/*pour mettre un scroll*/
+    width: 500px;
+}
+
+.slide{
+    padding: 12px;
+    display: flex;
+   /*width: 640px;*/
+   animation-duration: 10s;
+   animation-name: mesImages;
+  animation-iteration-count: infinite;
+}
+
+#image3{
+    height: 224px;
+}
+
+
+
+@keyframes mesImages{
+  0%{
+    transform:translateX(0);
+  }
+  33.3%{
+    transform:translateX(-640px);
+  }
+  66%{
+    transform:translateX(-1280px)
+  }
+  99%{
+    transform: translateX(-1920px);
+  }
+  100%{
+    transform:translateX(0);
+  }
+}
+
+footer{
+    width: 100%;
+    background-color: rgba(214, 213, 213, 1);
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    object-fit: contain; /*la section boite footer s'aggrandi automatiquement*/
+    
+}
+
+@font-face {
+    font-family:'Inter' ;
+    src: url("../fonts/Inter-VariableFont_slnt,wght.ttf") format('truetype');
+    font-weight:normal;
+    font-style:normal;
+  }
+
+footer .formulaire{
+    
+    border: solid 4px brown;
+    padding:14px 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: green;
+
+}
+
+.form-group{
+    border: solid 4px blue;
+    padding:7px 26px;
+    border-radius:13px;
+}
+
+input{
+  
+    border-radius: 13px;
+    padding:2px;
+    border-color:white;
+   
+}
+
+button{
+    background-color: rgba(187, 137, 137, 1) ;
+    border-radius: 0px 12px 12px 0px;
+    border-color:rgba(187, 137, 137, 1) ;
+    padding: 2px 16px;
+    margin:7px -23px;
+    color:white;
+}
+
+.planDuSite{
+    width: 30%;
+    border: yellowgreen solid 4px;
+    padding: 10px 80px;
+   
+   
+}
+
+.planDuSite ul{
+    list-style-type: none;
+    font-family: 'Inter', sans-serif;
+    border: solid 3px black;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.planDuSite ul li{
+    /*text-decoration: none; /* pour ne pas être souligné*/
+    border:solid 2px blue;
+    padding: 8px 8px;
+    margin:8px;
+    
+}
+
+.planDuSite ul li a {
+    text-decoration: none;
+}
+
+.icones{
+    border: orange 4px solid;
+    padding: 17px 13px;
+}
+
+.icones img{
+    border:solid 9px bisque;
+    margin:10px;
+}
+
+
+    
+    
+    
+    
+    

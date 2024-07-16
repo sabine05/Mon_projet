@@ -1,0 +1,336 @@
+/* html {
+    font-size: 10px; 
+    font-family: "Open Sans", sans-serif; 
+    background-color: rgba(187, 137, 137, 1);
+  }
+
+  body {
+    width: 600px;
+    margin: 0 auto;
+    background-color:  rgba(187, 137, 137, 1);
+    padding: 0 20px 20px 20px;
+    border:  5px solid black; //pour entourer le corps de la page
+  }
+  h1 { //positioner le titre
+    //font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px black;
+  }
+    
+  style="list-style-type:none"pour les listes*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+  body {
+    background-color:  rgba(187, 137, 137, 1);
+  }
+
+header { 
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start; /*espacer les éléments*/
+    align-items: center;
+    width:100vw; 
+    height: 130px;
+    border: 5px solid greenyellow;
+    /* margin: 20px; */
+    margin: 50px 5px;
+    padding: 20px;
+}
+
+
+nav{
+margin-left: 20px;
+}
+nav ul   {
+
+    list-style: none;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+  
+}
+
+nav ul li{
+    margin-left: 20px; /*espacer les éléments*/
+}
+
+nav ul li a:hover {
+    color: red; /* Changer la couleur des liens au survol */
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+.accueil{ /*on met une image d'arrière plan*/
+
+margin-top: 50px;
+background-image:  url(../image/ImageAccueil.png) ;
+height: 60vh;
+
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+display: flex; /* Utilisez flexbox pour centrer le contenu */
+justify-content: center; /* Centre horizontalement le contenu */
+/*align-items: center; /* Centre verticalement le contenu */
+
+}
+
+@font-face {
+  font-family:'Jomolhari' ;
+  src: url("../fonts/Jomolhari-Regular.ttf") format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
+
+h1{
+  
+  color: white;
+  font-size: 96; /* Ajustez la taille de la police selon vos besoins */
+  font-family: 'Jomolhari', sans-serif;
+  height: 50%;
+  padding: 172px; /* Espace entre le texte et le bord du cadre */
+  text-align: center;
+  /*margin:40px;*/
+
+}
+
+h2{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  padding: 50px;
+}
+
+
+
+.articles article {
+  margin-bottom: 20px;
+}
+
+.articles h3{
+  color: white;
+  position: relative;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+  display: flex; /* Utilisation de Flexbox pour aligner l'image et le texte */
+  align-items: center; /* Centre verticalement l'image et le texte */
+}
+
+
+.articles h3 img {
+  width: 30px; /* Ajustez la taille de l'image selon vos besoins */
+  height: auto; /* Permet à la hauteur de s'ajuster automatiquement en fonction de la largeur */
+  margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+
+
+/*section carousel*/
+.caroussel{
+  display: flex;
+  justify-content: center; /*alignement pour l'axe des x*/
+  align-items: center;/*on aligne sur la hauteur*/
+  height:41vh ; /*hauteur*/
+   
+}
+
+.caroussel h3{
+  text-align: center;
+}
+
+.carousel-container  {
+  /*display: flex;*/
+  
+  /*justify-content: center;*/
+  /*align-items: center;/*on aligne sur la hauteur*/
+  width: 640px;
+  overflow: hidden;/*pour mettre un scroll*/
+  /*height:100vh ; /*hauteur*/
+  
+  border:2px solid black;
+}
+
+.slide{
+  display: flex;
+  /*width: 640px;*/
+  animation-duration: 10s;
+  animation-name: mesImages;
+  animation-iteration-count: infinite;
+}
+@keyframes mesImages{
+  0%{
+    transform:translateX(0);
+  }
+  33.3%{
+    transform:translateX(-640px);
+  }
+  66%{
+    transform:translateX(-1280px)
+  }
+  99%{
+    transform: translateX(-1920px);
+  }
+  100%{
+    transform:translateX(0);
+  }
+}
+
+
+/*
+.carousel-nav{
+  display: flex;
+  justify-content:center;
+}*/
+
+/*
+.carousel-nav label{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999;
+  margin:0 5px;
+  cursor:pointer;
+} */
+
+/*
+.carousel-nav label:hover{
+  background-color:#333;
+}*/
+
+/* Masquer les cases à cocher */
+/*
+.carousel .carousel-container input[type="checkbox"]{
+  display:block;
+} */
+
+/* gérer le changement de diapositive en fonction des cases à cocher */
+/*
+#slide1:checked ~ .carousel-container .slide:nth-child(1),
+#slide2:checked ~ .carousel-container .slide:nth-child(2),
+#slide3:checked ~ .carousel-container .slide:nth-child(3) {
+    opacity: 1;
+}*/
+
+
+/*Section Footer */
+footer{
+background-color: rgba(214, 213, 213, 1);
+display: flex;
+height: 40vh; /*on met de la hauteur pour le footer*/
+flex-direction: row;
+/*gap: 20px;*/
+}
+
+.formulaire {
+  display:flex;
+  align-items: center;
+  gap:10px; /*espace entre input et le bouton*/
+    /*width: 10%;
+    margin: 100px auto;
+    padding: 33px 10px 11px 59px;*/
+    padding-right: 10px;
+}
+
+@font-face {
+  font-family:'Inter' ;
+  src: url("../fonts/Inter-VariableFont_slnt,wght.ttf") format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
+
+
+.formulaire h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7em;
+    color: #333;
+    margin-right: 11px;
+  
+    text-align: center;
+    /*text-align: center;*/
+    padding-bottom: 10px;
+    
+}
+
+.form-group { /*conteneur du texte et bouton*/
+display: flex;
+align-items: center;
+}
+
+.form-group input[type="text"]{
+  /*flex: 1;*/
+  /*align-items: center;*/
+ 
+  border-radius: 1em;
+  border-color:white;
+ 
+}
+
+.form-group  button{
+  border-radius: 1em;
+  color: white;
+  background-color: rgba(187, 137, 137, 1);
+}
+
+.planDuSite{
+ /* border: 2px solid #000;*/
+  width: 30%;
+  margin: 53px auto;
+  padding: 49px 54px 47px 40px;
+
+}
+
+.planDuSite ul {
+
+  border: 2px solid #000;
+  list-style-type: none;
+  align-items: center;
+  padding: 1px  ;
+}
+
+.planDuSite ul li{
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+.icones{
+  display:flex;
+  
+  margin: 50px auto;
+  padding: 68px 3px 47px 54px;
+  
+}
+.icones img{
+  width: 24px; /* Largeur des icônes */
+  height: 24px; /* Hauteur des icônes */
+  margin: 0 10px; /* Espacement horizontal entre les icônes */
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
